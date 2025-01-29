@@ -3,7 +3,16 @@ from dotenv import load_dotenv
 import os
 load_dotenv()
 
+#logic of market research agent
+# 1/ get user input to understand what topic to research
+# 2/ Use perplexity API to find some interesting facts 
+# 3/ Use Claude API to modify the structure 
+# 4/ Ask user if the post is good or not if user approves store post in DB
+# 5/ Ask the user when to schedule post 
+
 perplexity_api_key = os.getenv('PERPLEXITY_API_KEY')
+
+user_topic = input("What topic would you like to know interesting facts about? ")
 
 messages = [
     {
@@ -16,7 +25,7 @@ messages = [
     {   
         "role": "user",
         "content": (
-            "Give me 3 interesting facts with stats about AI in comliance. With the 3 interesting stats make sure to include the sources"
+            f"Give me 5 interesting facts with stats about {user_topic}. With the 3 interesting stats make sure to include the sources"
         ),
     },
 ]
