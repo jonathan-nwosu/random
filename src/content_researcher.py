@@ -13,9 +13,10 @@ class LinkedInPostFormatter:
         """Format research content into a LinkedIn post using Claude."""
         prompt = f"""Format this research about {topic} into a LinkedIn post with exactly this structure:
         
-        [Title with one emoji]: [topic]: [subtitle]
-        
-        [Two opening lines about the topic]
+        [Title] This headline should draw the reader in but avoid using anything that sounds too hyperbolic. The title does need to be gripping though. 
+        The title should pull readers in and grab attention in a sea of posts online. 
+
+        [Two opening lines about the topic. These should be non obvious, slightly contrarian takes that are insighful yet not mainstream ideas...] 
         
         👉 [Point 1]
         👉 [Point 2]
@@ -23,11 +24,13 @@ class LinkedInPostFormatter:
         👉 [Point 4]
         👉 [Point 5]
         
-        [Two closing lines]
+        [Two closing lines] The closing lines should be insightful and draw on insights from the points made above. Again the reader must feel as 
+        as though they've learnt something. Don't just have a conclusion write something that is thought provoking and challenges convetnional wisdom.
+        It needs to be interesting and sharable. 
         
         Use exactly 4-5 emojis total throughout the post (including title). Place the emojis naturally within the text.
         Return the post as plain text with proper line breaks.
-        Do not include any text formatting symbols, just the plain text and emojis.
+        Do not include any text formatting symbols, just the plain text and emojis.The reader should leave feeling like they've taken in some valuable insights and information.
 
         Here's the research:
         {research_content}"""
