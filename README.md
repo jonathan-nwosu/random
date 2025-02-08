@@ -17,6 +17,7 @@ A Python-based tool that automatically generates professional LinkedIn posts by 
 2. Create .env file:
 
 `PERPLEXITY_API_KEY=your_key_here`
+
 `ANTHROPIC_API_KEY=your_key_here`
 
 ## Structure
