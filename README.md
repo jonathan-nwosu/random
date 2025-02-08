@@ -23,6 +23,7 @@ A Python-based tool that automatically generates professional LinkedIn posts by 
 ## Structure
 
 PerplexityResearcher: Handles research via Perplexity AI
+
 LinkedInPostFormatter: Formats posts using Claude
 
 ## Requirements
