@@ -29,7 +29,9 @@ LinkedInPostFormatter: Formats posts using Claude
 ## Requirements
 
 Python 3.8+
+
 Perplexity AI API key
+
 Anthropic API key
 
 ## Troubleshooting
