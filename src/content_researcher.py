@@ -5,6 +5,13 @@ from dotenv import load_dotenv
 from anthropic import Anthropic
 
 class LinkedInPostFormatter:
+    """
+    Handles the formatting of research content into LinkedIn-ready posts using Claude.
+    
+    Attributes:
+        anthropic: Anthropic client instance for interacting with Claude API
+    """
+
     def __init__(self):
         load_dotenv()
         self.anthropic = Anthropic(api_key=os.getenv('ANTHROPIC_API_KEY'))
@@ -13,8 +20,8 @@ class LinkedInPostFormatter:
         """Format research content into a LinkedIn post using Claude."""
         prompt = f"""Format this research about {topic} into a LinkedIn post with exactly this structure:
         
-        [Title] This headline should draw the reader in but avoid using anything that sounds too hyperbolic. The title does need to be gripping though. 
-        The title should pull readers in and grab attention in a sea of posts online. 
+        [Title] This headline should draw the reader in but avoid using anything that sounds hyperbolic. The title does need to be gripping though. 
+        The title should pull readers in and grab attention in a sea of posts online. Don't use words like revolutionise. 
 
         [Two opening lines about the topic. These should be non obvious, slightly contrarian takes that are insighful yet not mainstream ideas...] 
         
