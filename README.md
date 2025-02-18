@@ -26,6 +26,8 @@ PerplexityResearcher: Handles research via Perplexity AI
 
 LinkedInPostFormatter: Formats posts using Claude
 
+Agentic features coming soon
+
 ## Requirements
 
 Python 3.8+
